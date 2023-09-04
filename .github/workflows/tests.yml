@@ -18,8 +18,8 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install pipenv
-          pipenv install --python "${{ matrix.python-version }}" --dev --system --skip-lock
+#          pip install pipenv
+          pip install ".[dev, learning]"
       - name: Lint with Mypy
         run: mypy crowdkit tests
       - name: Lint with flake8
