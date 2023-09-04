@@ -18,7 +18,6 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-#          pip install pipenv
           pip install ".[dev, learning]"
       - name: Lint with Mypy
         run: mypy crowdkit tests
